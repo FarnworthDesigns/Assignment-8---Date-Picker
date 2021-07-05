@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Date Picker</title>
+<!-- Bring in the jQuery UI stylesheet and place it BEFORE your stylesheet-->
+<link href="css/jquery-ui.min.css" rel="stylesheet">
+<link href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+<!-- Bring in some Google fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<!-- Bring in the jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Bring in the jQuery UI plugin and place it AFTER the jQuery  library -->
+<script src="js/jquery-ui.min.js"></script>
+<!-- Your beautiful jQuery code goes below -->
+<script>
+$(document).ready(function() {
+  $("#dob").datepicker({
+	  changeMonth: true,
+	  changeYear: true,
+	  yearRange: "-120: +0",
+	  maxDate: 0,
+	  dateFormat: "m-d-y"
+  });
+}); // end ready
+</script>
+</head>
+<body>
+  <div class="content">
+    <h1>A Birth Day Picker</h1>
+    <form>
+      <div>
+        <label for="dob" class="label">What's your birth date?</label>
+        <input type="text" id="dob" name="birthdate">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
